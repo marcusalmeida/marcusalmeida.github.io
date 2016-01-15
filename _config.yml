@@ -3,8 +3,7 @@ title: Marcus Almeida
 description: '...'
 url: 'http://marcusalmeida.github.io/' 
 baseurl: '/'
-# google_analytics: 'UA-XXXXXX-X'
-
+google_analytics: 'UA-72489345-1'
 author:
   name: 'Marcus Almeida'
   email: marcusmage@gmail.com
