@@ -1,0 +1,28 @@
+# Site settings
+title: Marcus Almeida
+description: '...'
+url: 'http://marcusalmeida.github.io/' 
+baseurl: '/'
+# google_analytics: 'UA-XXXXXX-X'
+
+author:
+  name: 'Marcus Almeida'
+  email: marcusmage@gmail.com
+  twitter_username: marcusalmeida
+  github_username:  marcusalmeida
+  #linkedin_username:  joshgerdes
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: pygments
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
