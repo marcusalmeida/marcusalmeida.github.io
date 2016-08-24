@@ -1,6 +1,6 @@
 # Site settings
 title: Marcus Almeida
-description: '...'
+description: "Software's Craftsman"
 url: 'http://marcusalmeida.github.io/' 
 baseurl: '/'
 google_analytics: 'UA-72489345-1'
@@ -9,7 +9,6 @@ author:
   email: marcusmage@gmail.com
   twitter_username: marcusalmeida
   github_username:  marcusalmeida
-  #linkedin_username:  joshgerdes
 
 # Build settings
 destination: _site
