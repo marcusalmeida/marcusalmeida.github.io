@@ -17,13 +17,13 @@ Pré-requisitos:
 
 Com os pré-requisitos instalados, podemos iniciar criando o diretório do projeto.
 
-{% highlight terminal %}
+{% highlight shell %}
   $ mkdir django-sandbox && cd $_ 
 {% endhighlight %}
 
 Precisamos criar alguns arquivos para configurar o ambiente.
 
-{% highlight terminal %}
+{% highlight shell %}
   $ touch Dockerfile docker-compose.yml requirements.txt 
 {% endhighlight %}
 
@@ -97,7 +97,7 @@ Depois de toda essas configurações, vamos a parte boa.
 A partir daqui, vamos *"buildar"* a imagem do container e criar o projeto.
 
 Para criar o projeto Django usando o comando *docker-compose* execute o seguinte.
-{% highlight terminal %}
+{% highlight shell %}
   $ docker-compose run web django-admin.py startproject mysite .
 {% endhighlight %}
 
@@ -108,7 +108,7 @@ Após a construção da imagem do container para o serviço **web**, o *Compose*
 
 Após o comando `docker-compose` finalizar, liste os arquivos no diretório do projeto:
 
-{% highlight terminal %}
+{% highlight shell %}
 $ ls -l
   drwxr-xr-x 2 root   root   mysite
   -rw-rw-r-- 1 user   user   docker-compose.yml
@@ -122,7 +122,7 @@ $ ls -l
 
 Agora vamos executar o comando `docker-compose up` para iniciar os componentes da stack do projeto.
 
-{% highlight terminal %}
+{% highlight shell %}
   $ docker-compose up
   Starting djangosandbox_web_1
   Attaching to djangosandbox_web_1
@@ -146,13 +146,13 @@ Neste ponto, finalmente, você deve ter a app Django executando na porta 8000. A
 
 Caso queria executar os comandos que o Django oferece dentro do container.
 
-Por exemplo, para criar uma nova app. Execute em outro terminal na pasta do projeto o seguinte comando.
-{% highlight terminal %}
+Por exemplo, para criar uma nova app. Execute em outro shell na pasta do projeto o seguinte comando.
+{% highlight shell %}
 $ docker-compose exec web python manage.py startapp polls
 {% endhighlight %}
 
 Para executar as migrações. 
-{% highlight terminal %}
+{% highlight shell %}
 $ docker-compose exec web python manage.py migrate
 Operations to perform:
   Apply all migrations: admin, auth, contenttypes, sessions
@@ -173,13 +173,13 @@ Running migrations:
   Applying sessions.0001_initial... OK
 {% endhighlight %}
 
-##### * Uma dica é criar uma alias na sessão do terminal para o comando `docker-compose exec web python manage.py` com: 
+##### * Uma dica é criar uma alias na sessão do shell para o comando `docker-compose exec web python manage.py` com: 
 
 #####  `alias pm='docker-compose exec web python manage.py'`
 
 ### Comandos úteis do Docker Compose
 Para verificar o status dos containers:
-{% highlight terminal %}
+{% highlight shell %}
 $ docker-compose ps
        Name                 Command                 State         Ports          
 ----------------------------------------------------------------------------------
@@ -188,21 +188,21 @@ djangosandbox_web_1  python manage.py runserver ...  Up     0.0.0.0:8000->8000/t
 {% endhighlight %}
 
 Para parar os containers:
-{% highlight terminal %}
+{% highlight shell %}
 $ docker-compose stop
 Stopping djangosandbox_web_1 ... done
 -
 {% endhighlight %}
 
 Para reinicar os containers:
-{% highlight terminal %}
+{% highlight shell %}
 $ docker-compose restart
 Restarting djangosandbox_web_1 ... done
 -
 {% endhighlight %}
 
 Para parar e destruir toda a stack de containers:
-{% highlight terminal %}
+{% highlight shell %}
 $ docker-compose down
 Stopping djangosandbox_web_1 ... done
 Removing djangosandbox_web_1 ... done
