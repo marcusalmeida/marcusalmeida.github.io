@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Desenvolvendo com Django & Docker Compose"
+title:  "Desenvolvendo com Django e Docker Compose"
 date:   2016-08-26 12:00:00
 categories: desenvolvimento
 tags: [dev,django,docker,python]

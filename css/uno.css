@@ -1115,6 +1115,7 @@ pre {
 
 .footer__copyright {
 	display: block;
+	text-align: right;
 	margin-bottom: .7em; }
 	.footer__copyright a {
 		color: #a6a6a6;
@@ -1461,6 +1462,23 @@ i {
 	width: 30%;
 	margin: 2.2em 0 2.1em 0;
 	border-top: 1px solid #dddddd; }
+
+.post-footer {
+	display: block;}
+	.post-footer__share {
+		text-align: right;
+		text-decoration: none;
+		color: #bbbbbb;
+		padding-left: 12px;}
+		.post-footer__share a {
+			color: #333333;}
+		.post-footer__share a:hover {
+    		color: #00aced;}
+		.post-footer__share-text{
+			padding-right: 10px;}
+		
+
+
 
 *:focus {
 	outline: none; }
