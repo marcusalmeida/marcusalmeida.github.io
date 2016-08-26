@@ -51,6 +51,10 @@
   <meta name="msapplication-TileImage" content="{{ "images/favicons/mstile-144x144.png" | prepend: site.baseurl }}">
   <meta name="theme-color" content="#ffffff">
 
+  {% if page.title %}
+  <link rel="amphtml" href="{{ page.id | prepend: '/_amp' | prepend: site.url }}">
+  {% endif %}
+  
   <link rel="stylesheet" href="{{ "css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}feed.xml">
