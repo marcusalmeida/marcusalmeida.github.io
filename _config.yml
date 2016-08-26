@@ -22,6 +22,5 @@ kramdown:
   input: GFM
   # do not replace newlines by <br>s
   hard_wrap: false
-  highlighter: rouge
 
 exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
