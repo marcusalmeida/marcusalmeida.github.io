@@ -31,7 +31,7 @@ O **Dockerfile** define o conteúdo da imagem do container que será utilizado. 
 
 Adicione o seguinte conteúdo ao arquivo **Dockerfile**.
 
-{% highlight docker %}
+{% highlight plaintext %}
 # Container base: python 3.6 Alpine Linux
 FROM python:3.6-alpine
 
@@ -70,7 +70,7 @@ Para mais informações sobre **docker-compose.yml**, veja a [documentação de 
 
 Adicione o seguinte conteúdo ao arquivo **docker-compose.yml**
 
-{% highlight yaml %}
+{% highlight plaintext %}
 version: '2'
 services:
     web:
